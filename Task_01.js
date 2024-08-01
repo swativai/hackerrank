@@ -1,29 +1,28 @@
 array = [-4, 1, 0, -1, -1, 3];
 
-var positive_count = 0;
-var negative_count = 0;
-var zero_count = 0;
+var positiveNumCount = 0;
+var negativeNumCount = 0;
+var zeroCount = 0;
 
 function plusMinus(array) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] > 0) {
-      positive_count++;
+      positiveNumCount++;
     } else if (array[i] < 0) {
-      negative_count++;
+      negativeNumCount++;
     } else if (array[i] == 0) {
-      zero_count++;
+      zeroCount++;
     }
   }
 
-  var calculatePos = (positive_count / array.length).toFixed(6);
+  var positiveNumRatio = (positiveNumCount / array.length).toFixed(6);
+  console.log(positiveNumRatio);
 
-  console.log(calculatePos);
+  var negativeNumRatio = (negativeNumCount / array.length).toFixed(6);
+  console.log(negativeNumRatio);
 
-  var calculateNeg = (negative_count / array.length).toFixed(6);
-  console.log(calculateNeg);
-
-  var calculateZero = (zero_count / array.length).toFixed(6);
-  console.log(calculateZero);
+  var zeroRatio = (zeroCount / array.length).toFixed(6);
+  console.log(zeroRatio);
 }
 
 plusMinus(array);
